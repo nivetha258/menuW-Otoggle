@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,inital-scale=1.0">
+	<title>layout</title>
+	<link rel="stylesheet" href="icon/icofont.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+		<!-----------------header start---------------------------------->
+	<header class="header">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-2 col-lg-2">
+					<div>LOGO</div>
+				</div>
+				<div id ="icon" class="col-10 d-lg-none d-block text-right"><i class="icofont-navigation-menu"></i></div>
+				<div id="mb-btn" class="col-lg-10 mb-btn d-none d-lg-block">
+					<div class="nav-bar">
+						<ul class=" navblock text-right">
+							<li>Home</li>
+							<li>About</li>
+							<li>Services</li>
+							<li>Portfolio</li>
+							<li>Team</li>
+							<li>Contact</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</header>
+<script>
+let iconEle = document.getElementById("icon");
+let btn = true;
+let mbEle = document.getElementById("mb-btn");
+let navEle = document.getElementsByClassName("nav-bar")[0];
+iconEle.addEventListener("click",function (){
+	if(btn){
+		mbEle.classList.add("active");
+		navEle.classList.add("navblock")
+	}
+	else{
+		mbEle.classList.remove("active");
+	}
+	btn = !btn
+})
+
+</script>
+</body>
+</html>
+
+
